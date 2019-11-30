@@ -27,7 +27,7 @@ ping -> pong
 echo "Hello World"  -> "Hello world"
 ```
 
-SET-VALUE
+**SET-VALUE**
 ```bash
 SET key value
 
@@ -35,38 +35,38 @@ eg.
 SET foo 100 -> OK
 ```
 
-GET-VALUE
+**GET-VALUE**
 ```bash
 GET foo -> "100"
 ```
 
-INCREMENT A VALUE
+**INCREMENT A VALUE**
 ```bash
 INCR foo -> (integer) 101
 ```
 
-DECREMENT A VALUE
+**DECREMENT A VALUE**
 ```bash
 DECR foo -> (integer) 100
 ```
 
-CHECK IF SOMETHING EXITS
+**CHECK IF KEY EXITS**
 ```bash
 EXISTS foo -> (integer) 1
 EXISTS food -> (integer) 0
 ```
 
-DELETE KEY:VALUE PAIR
+**DELETE KEY:VALUE PAIR**
 ```bash
 DEL foo -> (integer) 1
 ```
 
-CLEAR EVERYTHING OUT ENTIRELY
+**CLEAR EVERYTHING OUT ENTIRELY**
 ```bash
 FLUSHALL -> OK
 ```
 
-KEY SPACES
+**KEY SPACES**
 ```bash
 SET server:name someserver -> OK
 GET server:name -> "someserver"
@@ -88,19 +88,20 @@ OR
 SETEX greeting 30 "Hello world" -> OK
 ```
 
-PERSISTING A KEY WITH A TTL
+**PERSISTING A KEY WITH A TTL**
+
 While the TTL is reducing, run the following command to persist greeting.
 
 ```bash
 PERSIST greeting
 ```
 
-SETTING MULTIPLE KEY:VALUE PAIRS
+**SETTING MULTIPLE KEY:VALUE PAIRS**
 ```bash
 MSET key1 "hello" key2 "world" -> OK
 ```
 
-RENAME KEYS
+**RENAME KEYS**
 ```bash
 RENAME key1 greeting -> OK
 ```
@@ -109,6 +110,7 @@ RENAME key1 greeting -> OK
 ### DATA TYPES
 
 **Lists**
+
 Appending values to the head of a list called "people"
 ```bash
 LPUSH people "Rashid" -> (integer) 1
