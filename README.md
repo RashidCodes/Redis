@@ -13,6 +13,7 @@ docker run --name some-redis --network some-network -d redis redis-server --appe
 ```
 
 **Connect to the redis-cli**
+
 This container will be removed immediately after I'm done using it.
 ```bash
 docker run -it --network some-network --rm redis redis-cli -h some-redis
